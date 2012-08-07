@@ -1,5 +1,5 @@
 [user]
-	name = Ricardo Valeriano
+  name = Ricardo Valeriano
   email = ricardo.valeriano@gmail.com
 [alias]
   st = status
@@ -9,6 +9,7 @@
   df = diff
   lg = log -p
   who = shortlog -s --  
+  sh = stash
 [github]
   user = ricardovaleriano
 [color]
@@ -23,10 +24,10 @@
   meta = yellow bold
   frag = magenta bold
   old = red bold
-          new = green bold
+  new = green bold
 [color "status"]
   added = yellow
   changed = green
   untracked = cyan
 [core]
-	editor = /usr/bin/vim
+  editor = /usr/bin/vim

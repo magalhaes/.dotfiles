@@ -17,7 +17,7 @@ run 'cp config/database.yml config/database.example'
 append_file ".gitignore", "config/database.yml"
 
 # gemfile
-gem "rspec-rails", :group => [ :development, :test ]
+gem "rspec-rails", :group => [:development, :test]
 
 # forcing bundle before tasks provided by external gems
 run "bundle install"

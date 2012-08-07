@@ -1,6 +1,6 @@
 function SetupWrapping(w)
-  set textwidth=85
-  set colorcolumn=85
+  let &textwidth=a:w
+  let &colorcolumn=a:w
 endfunction
 
 call pathogen#infect()
@@ -11,10 +11,9 @@ filetype plugin indent on
 
 set number
 
-au BufNewFile,BufRead *.thor set filetype=ruby
-au BufNewFile,BufRead Gemfile set filetype=ruby
-au BufNewFile,BufRead Guardfile set filetype=ruby
-au BufNewFile,BufRead *.afc,*.afc.txt,*.md,README,Readme call SetupWrapping(85)
+au BufNewFile,BufRead *.thor,Gemfile,Guardfile set filetype=ruby
+au BufNewFile,BufRead *.afc,*.afc.txt call SetupWrapping(87)
+au BufNewFile,BufRead *.md,README,Readme,*.html,*.txt call SetupWrapping(80)
 
 set laststatus=2
 set statusline+=%#warningmsg#

@@ -1,0 +1,4 @@
+if [ -e .aliasesrc ]
+  then
+    alias please = "bundle exec"
+fi
