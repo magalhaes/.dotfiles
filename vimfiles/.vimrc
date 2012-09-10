@@ -40,3 +40,4 @@ let mapleader=","
 map <leader>n :NERDTreeToggle<cr>
 "Closes vim if the last tab is NERDtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let NERDTreeShowHidden=1
