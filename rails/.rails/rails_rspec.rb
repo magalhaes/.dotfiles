@@ -29,6 +29,7 @@ rake "db:create", :env => 'development'
 # rspec
 generate "rspec:install"
 append_file ".rspec", "--format documentation"
+append_file ".rspec", "--require spec_helper"
 append_file ".rspec", "\n"
 
 rake "db:migrate", :env => 'development'
