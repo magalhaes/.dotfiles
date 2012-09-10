@@ -31,6 +31,8 @@ generate "rspec:install"
 append_file ".rspec", "--format documentation"
 append_file ".rspec", "\n"
 
+rake "db:migrate", :env => 'development'
+
 # commit to git
 git :init
 git :add => "."
