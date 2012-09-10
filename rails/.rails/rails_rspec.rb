@@ -9,7 +9,6 @@ application("config.generators.stylesheets = false")
 application("config.generators.javascripts = false")
 application("config.generators.helper = false")
 
-
 # clean up rails defaults
 remove_file 'public/index.html'
 remove_file 'public/images/rails.png'
@@ -17,6 +16,8 @@ run 'cp config/database.yml config/database.example'
 append_file ".gitignore", "config/database.yml"
 
 # gemfile
+gsub_file "Gemfile", /(gem 'sass-rails',.*)/, '# \1'
+gsub_file "Gemfile", /(gem 'coffee-rails',.*)/, '# \1'
 gem "rspec-rails", :group => [:development, :test]
 
 # forcing bundle before tasks provided by external gems
@@ -34,3 +35,5 @@ append_file ".rspec", "\n"
 git :init
 git :add => "."
 git :commit => "-am 'omg! initial commit.'"
+
+run "mvim"
