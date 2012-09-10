@@ -34,5 +34,3 @@ append_file ".rspec", "\n"
 git :init
 git :add => "."
 git :commit => "-am 'omg! initial commit.'"
-
-run "rails s"
