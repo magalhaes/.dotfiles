@@ -37,3 +37,6 @@
 [submodule "vimfiles/sources/vim-github-theme"]
 	path = vimfiles/sources/vim-github-theme
 	url = git@github.com:ricardovaleriano/vim-github-theme.git
+[submodule "vimfiles/sources/command-t"]
+	path = vimfiles/sources/command-t
+	url = git://git.wincent.com/command-t.git
