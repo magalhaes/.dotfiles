@@ -2,10 +2,6 @@
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
-#rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 # git
 if [ -f ~/.git-completion.bash ] ; then source ~/.git-completion.bash ; fi
 
@@ -24,22 +20,18 @@ alias ss="open /System/Library/Frameworks/ScreenSaver.framework/Resources/Screen
 alias firefox="open /Applications/Firefox.app"
 alias chrome="open /Applications/Google\ Chrome.app"
 alias please="bundle exec rake"
-export PATH=/Users/ricardo/.gem/ruby/1.8/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH
+
+export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH
 export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/spidermonkey/lib:/usr/local/mysql/lib/
 
 function current_ruby {
-  #current_ruby=$(rvm-prompt i v p g)
-  #if [[ $current_ruby == "" ]]; then
-  #  current_ruby=$(ruby -e "v = %x(ruby -v).split(' '); puts \"#{v[0]}-#{v[1]} (non-rvm)\"")
-  #fi
-  #echo $current_ruby
   ruby -v | ruby -e 'puts "rubái #{gets.chop.split(" ")[1]}"'
 }
-
-#pair script:
-export PATH=~/.dotfiles/scripts/pair/:$PATH
 
 #scripts:
 export PATH=~/.dotfiles/scripts/:$PATH
 
-PS1="[\u@\h] [\e[0;30m$(current_ruby)\e[m] \e[0;33m\w\a\e[m $(parse_git_branch)\n\$ " 
+function promp {
+  PS1="[\u@\h] [\e[0;30m$(current_ruby)\e[m] \e[0;33m\w\a\e[m $(parse_git_branch)\n\$ " 
+}
+PROMPT_COMMAND=promp
