@@ -32,6 +32,6 @@ function current_ruby {
 export PATH=~/.dotfiles/scripts/:$PATH
 
 function promp {
-  PS1="[\u@\h] [\e[0;30m$(current_ruby)\e[m] \e[0;33m\w\a\e[m $(parse_git_branch)\n\$ " 
+  PS1="[\u@\h] (\e[0;30m$(current_ruby)\e[m) \e[0;33m\w\a\e[m $(parse_git_branch)\n\$ " 
 }
 PROMPT_COMMAND=promp
