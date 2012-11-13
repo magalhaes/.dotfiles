@@ -1,0 +1,16 @@
+#!/bin/bash
+#http://pygments.org/docs/cmdline/
+
+LANG="ruby"
+
+if [ -n "$2" ]
+  then
+    LANG=$2;
+fi
+
+if [ -a "$1" ]
+  then
+    pygmentize -f rtf -l $LANG $1 | pbcopy
+  else
+    pbpaste | pygmentize -f rtf  -l $LANG | pbcopy
+fi
