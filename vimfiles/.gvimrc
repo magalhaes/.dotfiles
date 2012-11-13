@@ -1,5 +1,5 @@
 :color github
-set guifont=Menlo\ regular:h15
+set guifont=Menlo\ regular:h17
 set guioptions-=T
 
 autocmd VimEnter * NERDTree "new windows with nerdtree

@@ -13,7 +13,8 @@ set number
 
 au BufNewFile,BufRead *.thor,Gemfile,Guardfile set filetype=ruby
 au BufNewFile,BufRead *.afc,*.afc.txt call SetupWrapping(87)
-au BufNewFile,BufRead *.md,README,Readme,*.html,*.txt call SetupWrapping(80)
+au BufNewFile,BufRead *.md,README,Readme,*.html,*.markdown call SetupWrapping(80)
+au BufNewFile,BufRead *.txt call SetupWrapping(70)
 
 set laststatus=2
 set statusline+=%#warningmsg#

@@ -1,4 +1,5 @@
 --skip-bundle
 --skip-test-unit
+--skip-index-html
 -d mysql
 -m ~/.rails/rails_rspec.rb

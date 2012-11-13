@@ -30,4 +30,4 @@
   changed = green
   untracked = cyan
 [core]
-  editor = /usr/bin/vim
+  editor = /usr/bin/mvim -m

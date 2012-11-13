@@ -1,2 +1,0 @@
-#http://pygments.org/docs/cmdline/
-pbpaste | pygmentize -l ruby -f rtf | pbcopy

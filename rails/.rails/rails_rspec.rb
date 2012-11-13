@@ -10,7 +10,6 @@ application("config.generators.javascripts = false")
 application("config.generators.helper = false")
 
 # clean up rails defaults
-remove_file 'public/index.html'
 remove_file 'public/images/rails.png'
 run 'cp config/database.yml config/database.example'
 append_file ".gitignore", "config/database.yml"
